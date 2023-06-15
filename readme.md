@@ -22,10 +22,20 @@ pip install telexception
 
 ## Usage
 
-First, initialize the bot with your API key and user ID:
+- Create telegram bot via @BotFather and get API_KEY
+
+- Get user_id (you can find other telegram bots who can provide this information like @userinfobot)
+
+- initialize the bot with your API key and user ID:
 
 ```python
 bot = Telexception("api_key", "user_id")
+```
+
+Also you can send traceback or log file:
+
+```python
+bot = Telexception("api_key", "user_id", send_traceback=True, path_to_logs='path/to/logs.log')
 ```
 
 Then, use the exception_handler decorator on any function you want to track:
